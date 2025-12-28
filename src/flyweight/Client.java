@@ -1,0 +1,32 @@
+package flyweight;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Client {
+    public static void main(String[] args) {
+
+        DeveloperFactory factory = new DeveloperFactory();
+
+        List<Developer> developers = new ArrayList<Developer>();
+
+        developers.add(factory.getDeveloperBySpeciality("java"));
+        developers.add(factory.getDeveloperBySpeciality("java"));
+        developers.add(factory.getDeveloperBySpeciality("java"));
+        developers.add(factory.getDeveloperBySpeciality("java"));
+        developers.add(factory.getDeveloperBySpeciality("java"));
+        developers.add(factory.getDeveloperBySpeciality("java"));
+        developers.add(factory.getDeveloperBySpeciality("java"));
+        developers.add(factory.getDeveloperBySpeciality("c++"));
+        developers.add(factory.getDeveloperBySpeciality("c++"));
+        developers.add(factory.getDeveloperBySpeciality("c++"));
+        developers.add(factory.getDeveloperBySpeciality("c++"));
+
+
+        for (Developer developer : developers) {
+            developer.writeCode();
+        }
+
+
+    }
+}
